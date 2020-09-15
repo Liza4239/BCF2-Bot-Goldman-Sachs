@@ -3,7 +3,9 @@ const {
     Extra
 } = require('../../../../../configs/telegram/bot');
 
-const { msgStart, msgProgrammes, msgNewAnalyst, msgSummerAnalyst,msgOffCycle, msgBasicQualifications,msgJobResponsibilities } = require('./config');
+const { msgStart, msgProgrammes, msgNewAnalyst, msgSummerAnalyst,msgOffCycle,
+     msgBasicQualifications,msgJobResponsibilities, msgSoftwareEngineering,
+    msgCyberSecurity,msgQuantitativeStrategists,msgSystemsEngineering} = require('./config');
 //const { visitor }= require('../../../../../configs/google/analytics');
 const conf=require('../situation-1/config');
 
@@ -76,4 +78,37 @@ bot.action('ActionHandlerBasicQualifications',
     ctx => {
         ctx.reply(msgBasicQualifications);
     });
+    bot.action('ActionHandlerRoles',
+    ctx => { 
+        ctx.reply(
+            msgProgrammes,
+            Extra.HTML().markup((m) =>
+                m.inlineKeyboard([
 
+                    m.callbackButton('Software Engineering', 'ActionHandlerSoftwareEngineering'),
+                    m.callbackButton('Cyber Security', 'ActionHandlerCyberSecurity'),
+                    m.callbackButton('Quantitative Strategists', 'ActionHandlerQuantitativeStrategists'),
+                    m.callbackButton('Systems Engineering ', 'ActionHandlerSystemsEngineering ')
+
+                ])
+                
+            )
+        );
+    });
+
+    bot.action('ActionHandlerSoftwareEngineering',
+    ctx => {
+        ctx.reply(msgSoftwareEngineering);
+    });
+    bot.action('ActionHandlerCyberSecurity',
+    ctx => {
+        ctx.reply(msgCyberSecurity);
+    });
+    bot.action('ActionHandlerQuantitativeStrategists',
+    ctx => {
+        ctx.reply(msgQuantitativeStrategists);
+    });
+    bot.action('ActionHandlerSystemsEngineering',
+    ctx => {
+        ctx.reply(msgSystemsEngineering);
+    });
