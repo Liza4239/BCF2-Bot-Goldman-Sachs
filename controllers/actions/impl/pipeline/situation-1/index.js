@@ -87,7 +87,7 @@ bot.action('ActionHandlerBasicQualifications',
                     [
                         m.callbackButton('Software Engineering', 'ActionHandlerSoftwareEngineering'),
                         m.callbackButton('Cyber Security', 'ActionHandlerCyberSecurity'),
-                    ]
+                    ],
 
                    [
                     m.callbackButton('Quantitative Strategists', 'ActionHandlerQuantitativeStrategists'),
