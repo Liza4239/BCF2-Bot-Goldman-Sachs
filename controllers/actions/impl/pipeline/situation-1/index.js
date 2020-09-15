@@ -202,7 +202,7 @@ bot.action('ActionHandlerBack',
         )
     }
 );
-bot.action('ActionHandlerBack',
+bot.action('ActionHandlerUsefulLinks',
     ctx => {
         ctx.reply(
             msgUsefulLinks,
