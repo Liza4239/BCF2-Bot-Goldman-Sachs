@@ -25,7 +25,7 @@ bot.action('ActionHandlerOurProgrammes',
                     ,
                     [
                         m.callbackButton('Off-Cycle Internship Programme', 'ActionHandlerOff-CycleInternshipProgramme')
-                    ]
+                    ],
                     [
                         m.callbackButton('back', 'ActionHandlerBack')   
                     ]
