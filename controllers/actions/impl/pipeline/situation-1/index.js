@@ -17,7 +17,7 @@ bot.action('ActionHandlerOurProgrammes',
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
                     [
-                        m.callbackButton('New Analyst Programme (starting in July 2021)', 'ActionHandlerNewAnalystProgramme')
+                        m.callbackButton('<b>New Analyst Programme (starting in July 2021):</b>', 'ActionHandlerNewAnalystProgramme')
                     ]
                     ,
                     [
@@ -112,7 +112,7 @@ bot.action('ActionHandlerRoles',
 
                     [
                         m.callbackButton('Quantitative Strategists', 'ActionHandlerQuantitativeStrategists'),
-                        m.callbackButton('Systems Engineering ', 'ActionHandlerSystemsEngineering ')
+                        m.callbackButton('Systems Engineering ', 'ActionHandlerSystemsEngineering')
                     ],
                     [
 
