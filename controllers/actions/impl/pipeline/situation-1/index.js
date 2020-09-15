@@ -77,10 +77,9 @@ bot.action('ActionHandlerJobResponsibilities',
 bot.action('ActionHandlerBasicQualifications',
     ctx => {
         ctx.reply(msgBasicQualifications,
-            msgProgrammes,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
-                    m.callbackButton('back', '/\'start/')
+                    m.callbackButton('back', 'ActionHandlerBack')
                 ])
             )
             );
@@ -108,6 +107,7 @@ bot.action('ActionHandlerBasicQualifications',
         );
     });
 
+
     bot.action('ActionHandlerSoftwareEngineering',
     ctx => {
         ctx.reply(msgSoftwareEngineering);
@@ -124,3 +124,38 @@ bot.action('ActionHandlerBasicQualifications',
     ctx => {
         ctx.reply(msgSystemsEngineering);
     });
+    bot.action('ActionHandlerBack',
+    ctx => {
+        ctx.reply(
+            msgStart,
+            Extra.HTML().markup((m) =>
+               
+
+                        m.inlineKeyboard([
+                            [
+                                m.callbackButton('Our programmes', 'ActionHandlerOurProgrammes'),
+                                m.callbackButton("Roles", "ActionHandlerRoles")
+                            ]
+                            
+                        ,
+                    
+                        
+                        [
+                            m.callbackButton("Job responsibilities", "ActionHandlerJobResponsibilities"),
+                            m.callbackButton("Basic qualifications", "ActionHandlerBasicQualifications"),
+                            m.callbackButton("Useful links", "ActionHandlerUsefulLinks")
+                        ]
+                           
+                   
+                    
+                    ])
+               
+
+
+
+
+            )
+        
+        )
+    }
+);
