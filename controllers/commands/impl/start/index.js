@@ -14,34 +14,33 @@ bot.command('start',
         ctx.reply(
             msgStart,
             Extra.HTML().markup((m) =>
-                [
-                    [
-
+               
 
                         m.inlineKeyboard([
-                            m.callbackButton('Our programmes', 'ActionHandlerOurProgrammes'),
-                            m.callbackButton("Roles", "ActionHandlerRoles")
-                        ])
-                    ]
-                ],
-
-                [
-                  [
-                    m.inlineKeyboard([
-                        m.inlineKeyboard([
-    
+                            [
+                                m.callbackButton('Our programmes', 'ActionHandlerOurProgrammes'),
+                                m.callbackButton("Roles", "ActionHandlerRoles")
+                            ]
+                            
+                        ,
+                    
+                        
+                        [
                             m.callbackButton("Job responsibilities", "ActionHandlerJobResponsibilities"),
                             m.callbackButton("Basic qualifications", "ActionHandlerBasicQualifications"),
-                            m.callbackButton("Useful links", "ActionHandlerUsefulLinks")])
+                            m.callbackButton("Useful links", "ActionHandlerUsefulLinks")
+                        ]
+                           
+                   
+                    
                     ])
-                  ]  
-                ]
                
 
 
 
 
             )
+        
         )
     }
 );
