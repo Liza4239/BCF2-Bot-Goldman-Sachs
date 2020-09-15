@@ -21,9 +21,9 @@ module.exports = {
     • Are highly motivated and adaptable
     • Are accurate and detail-oriented
     • Display creativity and entrepreneurial spirit`,
-    msgSoftwareEngineering: ` <h3><b><u>Software engineering:</u></b></h3> Become a software engineer
+    msgSoftwareEngineering: ` <b><u>Software engineering:</u></b> <pre>Become a software engineer
      at Goldman Sachs and bring your skills to help us build the next generation of finance systems
-      that change how our clients and internal teams conduct business.
+      that change how our clients and internal teams conduct business.:</pre>
        Combine the best open source software, databases, cloud solutions, and programming languages,
         to solve problems and provide accurate, complex, scalable applications that help our business
          and clients gain new insights. As a software engineer, you are the change agents that transform
