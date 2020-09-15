@@ -76,7 +76,14 @@ bot.action('ActionHandlerJobResponsibilities',
 
 bot.action('ActionHandlerBasicQualifications',
     ctx => {
-        ctx.reply(msgBasicQualifications);
+        ctx.reply(msgBasicQualifications,
+            msgProgrammes,
+            Extra.HTML().markup((m) =>
+                m.inlineKeyboard([
+                    m.callbackButton('back', '/\'start/')
+                ])
+            )
+            );
     });
     bot.action('ActionHandlerRoles',
     ctx => { 
