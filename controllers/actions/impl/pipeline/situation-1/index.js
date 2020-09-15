@@ -3,7 +3,7 @@ const {
     Extra
 } = require('../../../../../configs/telegram/bot');
 
-const {  msgProgrammes, msgNewAnalyst, msgSummerAnalyst,msgOffCycle,
+const {  msgStart,msgProgrammes, msgNewAnalyst, msgSummerAnalyst,msgOffCycle,
      msgBasicQualifications,msgJobResponsibilities, msgSoftwareEngineering,
     msgCyberSecurity,msgQuantitativeStrategists,msgSystemsEngineering} = require('./config');
 //const { visitor }= require('../../../../../configs/google/analytics');
@@ -15,10 +15,20 @@ bot.action('ActionHandlerOurProgrammes',
             msgProgrammes,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
-
-                    m.callbackButton('New Analyst Programme (starting in July 2021)', 'ActionHandlerNewAnalystProgramme'),
-                    m.callbackButton('Summer Analyst Programme (July - September 2021)', 'ActionHandlerSummerAnalystProgramme'),
-                    m.callbackButton('Off-Cycle Internship Programme', 'ActionHandlerOff-CycleInternshipProgramme')
+                    [
+                        m.callbackButton('New Analyst Programme (starting in July 2021)', 'ActionHandlerNewAnalystProgramme')
+                    ]
+                   ,
+                   [
+                    m.callbackButton('Summer Analyst Programme (July - September 2021)', 'ActionHandlerSummerAnalystProgramme')
+                   ]
+                    ,
+                    [
+                        m.callbackButton('Off-Cycle Internship Programme', 'ActionHandlerOff-CycleInternshipProgramme')
+                    ]
+                    [
+                        m.callbackButton('back', 'ActionHandlerBack')   
+                    ]
 
                 ])
                 
@@ -33,7 +43,8 @@ bot.action("ActionHandlerNewAnalystProgramme",
             msgNewAnalyst,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
-                    m.urlButton('Read more', 'https://www.goldmansachs.com/careers/students/programs/emea/new-analyst-programme.html')
+                    m.urlButton('Read more', 'https://www.goldmansachs.com/careers/students/programs/emea/new-analyst-programme.html'),
+                    m.callbackButton('back', 'ActionHandlerBack')
                 ])
             )
         );
@@ -45,7 +56,8 @@ bot.action("ActionHandlerNewAnalystProgramme",
             msgSummerAnalyst,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
-                    m.urlButton('Read more', 'https://www.goldmansachs.com/careers/students/programs/emea/summer-analyst-programme.html')
+                    m.urlButton('Read more', 'https://www.goldmansachs.com/careers/students/programs/emea/summer-analyst-programme.html'),
+                    m.callbackButton('back', 'ActionHandlerBack')
                 ])
             )
         );
@@ -57,7 +69,8 @@ bot.action("ActionHandlerNewAnalystProgramme",
             msgOffCycle,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
-                    m.urlButton('Read more', 'https://www.goldmansachs.com/careers/students/programs/emea/off-cycle-internships.html')
+                    m.urlButton('Read more', 'https://www.goldmansachs.com/careers/students/programs/emea/off-cycle-internships.html'),
+                    m.callbackButton('back', 'ActionHandlerBack')
                 ])
             )
         );
@@ -65,12 +78,13 @@ bot.action("ActionHandlerNewAnalystProgramme",
 bot.action('ActionHandlerJobResponsibilities',
     ctx => {
        
-        ctx.reply(
-            Extra.HTML().markup((m) => 
-
-           msgJobResponsibilities
+        ctx.reply(msgJobResponsibilities,
+            Extra.HTML().markup((m) =>
+                m.inlineKeyboard([
+                    m.callbackButton('back', 'ActionHandlerBack')
+                ])
             )
-        );
+            );
         
     });
 
@@ -99,7 +113,11 @@ bot.action('ActionHandlerBasicQualifications',
                     m.callbackButton('Quantitative Strategists', 'ActionHandlerQuantitativeStrategists'),
                     m.callbackButton('Systems Engineering ', 'ActionHandlerSystemsEngineering ')
                    ]
-                   
+                   [
+                    
+                                m.callbackButton('back', 'ActionHandlerBack')
+                         
+                   ]
 
                 ])
                 
@@ -110,19 +128,43 @@ bot.action('ActionHandlerBasicQualifications',
 
     bot.action('ActionHandlerSoftwareEngineering',
     ctx => {
-        ctx.reply(msgSoftwareEngineering);
+        ctx.reply(msgSoftwareEngineering,
+            Extra.HTML().markup((m) =>
+                m.inlineKeyboard([
+                    m.callbackButton('back', 'ActionHandlerBack')
+                ])
+            )
+            );
     });
     bot.action('ActionHandlerCyberSecurity',
     ctx => {
-        ctx.reply(msgCyberSecurity);
+        ctx.reply(msgCyberSecurity,
+            Extra.HTML().markup((m) =>
+                m.inlineKeyboard([
+                    m.callbackButton('back', 'ActionHandlerBack')
+                ])
+            )
+            );
     });
     bot.action('ActionHandlerQuantitativeStrategists',
     ctx => {
-        ctx.reply(msgQuantitativeStrategists);
+        ctx.reply(msgQuantitativeStrategists,
+            Extra.HTML().markup((m) =>
+                m.inlineKeyboard([
+                    m.callbackButton('back', 'ActionHandlerBack')
+                ])
+            )
+            );
     });
     bot.action('ActionHandlerSystemsEngineering',
     ctx => {
-        ctx.reply(msgSystemsEngineering);
+        ctx.reply(msgSystemsEngineering,
+            Extra.HTML().markup((m) =>
+                m.inlineKeyboard([
+                    m.callbackButton('back', 'ActionHandlerBack')
+                ])
+            )
+            );
     });
     bot.action('ActionHandlerBack',
     ctx => {
