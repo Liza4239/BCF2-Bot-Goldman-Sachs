@@ -3,7 +3,7 @@ const {
     Extra
 } = require('../../../../../configs/telegram/bot');
 
-const {  msgStart,msgProgrammes, msgNewAnalyst, msgSummerAnalyst,msgOffCycle,
+const {  msgStart,msgProgrammes, msgRoles,msgNewAnalyst, msgSummerAnalyst,msgOffCycle,
      msgBasicQualifications,msgJobResponsibilities, msgSoftwareEngineering,
     msgCyberSecurity,msgQuantitativeStrategists,msgSystemsEngineering} = require('./config');
 //const { visitor }= require('../../../../../configs/google/analytics');
@@ -101,7 +101,7 @@ bot.action('ActionHandlerBasicQualifications',
     bot.action('ActionHandlerRoles',
     ctx => { 
         ctx.reply(
-            msgProgrammes,
+            msgRoles,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
                     [
@@ -112,7 +112,7 @@ bot.action('ActionHandlerBasicQualifications',
                    [
                     m.callbackButton('Quantitative Strategists', 'ActionHandlerQuantitativeStrategists'),
                     m.callbackButton('Systems Engineering ', 'ActionHandlerSystemsEngineering ')
-                   ]
+                   ],
                    [
                     
                                 m.callbackButton('back', 'ActionHandlerBack')
