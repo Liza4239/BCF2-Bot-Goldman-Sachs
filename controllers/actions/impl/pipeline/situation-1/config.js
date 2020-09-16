@@ -1,5 +1,5 @@
 module.exports = {
-    msgProgrammes: `<b>OUR PROGRAMMES:</b>`,
+    msgProgrammes: `<b>OUR PROGRAMMES</b>`,
     msgNewAnalyst: `Full time entry-level employment dedicated for Students and Graduates who have minimal work experience and who are able to work on a full time basis in 2021.`,
     msgSummerAnalyst: `10-week internship designed for Students who are available to work in the Summer of 2021 and who can start full time employment in 2022.`,
     msgOffCycle: `3 to 12 months full-time internship for Students and Graduates who have minimal work experience. We are processing applications on a on a rolling base.`,
