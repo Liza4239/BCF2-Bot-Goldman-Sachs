@@ -1,5 +1,6 @@
 const {
     bot,
+    link,
     Extra
 } = require('../../../../../configs/telegram/bot');
 
@@ -19,12 +20,13 @@ const {
     msgUsefulLinks
 } = require('./config');
 
-//const { visitor }= require('../../../../../configs/google/analytics');
-
-const conf = require('../situation-1/config');
+const { visitor }= require('../../../../../configs/google/analytics');
 
 bot.action('ActionHandlerOurProgrammes',
     ctx => {
+        visitor
+            .event(link, "Click Action", "/our-programmes")
+            .send();
         ctx.reply(
             msgProgrammes,
             Extra.HTML().markup((m) =>
@@ -62,6 +64,9 @@ bot.action('ActionHandlerOurProgrammes',
 
 bot.action("ActionHandlerNewAnalystProgramme",
     ctx => {
+        visitor
+            .event(link, "Click Action", "/new-analyst-programme")
+            .send();
         ctx.reply(
             msgNewAnalyst,
             Extra.HTML().markup((m) =>
@@ -85,6 +90,9 @@ bot.action("ActionHandlerNewAnalystProgramme",
 
 bot.action("ActionHandlerSummerAnalystProgramme",
     ctx => {
+        visitor
+            .event(link, "Click Action", "/summer-analyst-programme")
+            .send();
         ctx.reply(
             msgSummerAnalyst,
             Extra.HTML().markup((m) =>
@@ -108,6 +116,9 @@ bot.action("ActionHandlerSummerAnalystProgramme",
 
 bot.action("ActionHandlerOff-CycleInternshipProgramme",
     ctx => {
+        visitor
+            .event(link, "Click Action", "/off-cycle-internship-programme")
+            .send();
         ctx.reply(
             msgOffCycle,
             Extra.HTML().markup((m) =>
@@ -131,6 +142,9 @@ bot.action("ActionHandlerOff-CycleInternshipProgramme",
 
 bot.action('ActionHandlerJobResponsibilities',
     ctx => {
+        visitor
+            .event(link, "Click Action", "/job-responsibilities")
+            .send();
         ctx.reply(msgJobResponsibilities,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
@@ -143,6 +157,9 @@ bot.action('ActionHandlerJobResponsibilities',
 
 bot.action('ActionHandlerBasicQualifications',
     ctx => {
+        visitor
+            .event(link, "Click Action", "/basic-qualifications")
+            .send();
         ctx.reply(msgBasicQualifications,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
@@ -154,6 +171,9 @@ bot.action('ActionHandlerBasicQualifications',
 
 bot.action('ActionHandlerRoles',
     ctx => {
+        visitor
+            .event(link, "Click Action", "/roles")
+            .send();
         ctx.reply(
             msgRoles,
             Extra.HTML().markup((m) =>
@@ -191,6 +211,9 @@ bot.action('ActionHandlerRoles',
 
 bot.action('ActionHandlerSoftwareEngineering',
     ctx => {
+        visitor
+            .event(link, "Click Action", "/software-engineering")
+            .send();
         ctx.reply(
             msgSoftwareEngineering,
             Extra.HTML().markup((m) =>
@@ -203,6 +226,9 @@ bot.action('ActionHandlerSoftwareEngineering',
 
 bot.action('ActionHandlerCyberSecurity',
     ctx => {
+        visitor
+            .event(link, "Click Action", "/cyber-security")
+            .send();
         ctx.reply(msgCyberSecurity,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
@@ -214,6 +240,9 @@ bot.action('ActionHandlerCyberSecurity',
 
 bot.action('ActionHandlerQuantitativeStrategists',
     ctx => {
+        visitor
+            .event(link, "Click Action", "/quantitative-strategist")
+            .send();
         ctx.reply(msgQuantitativeStrategists,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
@@ -225,6 +254,9 @@ bot.action('ActionHandlerQuantitativeStrategists',
 
 bot.action('ActionHandlerSystemsEngineering',
     ctx => {
+        visitor
+            .event(link, "Click Action", "/systems-engineering")
+            .send();
         ctx.reply(msgSystemsEngineering,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
@@ -274,6 +306,9 @@ bot.action('ActionHandlerBack',
 
 bot.action('ActionHandlerUsefulLinks',
     ctx => {
+        visitor
+            .event(link, "Click Action", "/useful-links")
+            .send();
         ctx.reply(
             msgUsefulLinks,
             Extra.HTML().markup((m) =>
