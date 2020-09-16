@@ -1,5 +1,6 @@
 const {
     bot,
+    link,
     Extra
 } = require('../../../../configs/telegram/bot');
 
@@ -8,6 +9,9 @@ const { msgStart } = require('./config');
 
 bot.command('start',
     ctx => {
+        visitor
+            .event(link, "Click Slash Command", "/support")
+            .send();
         ctx.reply(
             msgStart,
             Extra.HTML().markup((m) =>

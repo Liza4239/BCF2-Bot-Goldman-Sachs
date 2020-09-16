@@ -3,6 +3,6 @@ const { msgHelp } = require('./config');
 
 bot.command('help',
     ctx => ctx.reply(msgHelp));
-        /* Make /help reply keyboard */
+
         
 

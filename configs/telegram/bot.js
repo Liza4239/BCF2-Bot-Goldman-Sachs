@@ -4,6 +4,7 @@ const Markup = require('telegraf/markup');
 
 const config = {
     port: process.env.PORT,
+    link: process.env.BOT_LINK,
     token: process.env.BOT_TOKEN,
 };
 
