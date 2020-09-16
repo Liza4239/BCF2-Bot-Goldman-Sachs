@@ -27,7 +27,7 @@ bot.action('ActionHandlerOurProgrammes',
         visitor
             .event(link, "Click Action", "/our-programmes")
             .send();
-        ctx.reply(
+        ctx.editMessageText(
             msgProgrammes,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
@@ -67,7 +67,7 @@ bot.action("ActionHandlerNewAnalystProgramme",
         visitor
             .event(link, "Click Action", "/new-analyst-programme")
             .send();
-        ctx.reply(
+        ctx.editMessageText(
             msgNewAnalyst,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
@@ -93,7 +93,7 @@ bot.action("ActionHandlerSummerAnalystProgramme",
         visitor
             .event(link, "Click Action", "/summer-analyst-programme")
             .send();
-        ctx.reply(
+        ctx.editMessageText(
             msgSummerAnalyst,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
@@ -119,7 +119,7 @@ bot.action("ActionHandlerOff-CycleInternshipProgramme",
         visitor
             .event(link, "Click Action", "/off-cycle-internship-programme")
             .send();
-        ctx.reply(
+        ctx.editMessageText(
             msgOffCycle,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
@@ -145,7 +145,7 @@ bot.action('ActionHandlerJobResponsibilities',
         visitor
             .event(link, "Click Action", "/job-responsibilities")
             .send();
-        ctx.reply(msgJobResponsibilities,
+        ctx.editMessageText(msgJobResponsibilities,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
                     m.callbackButton('🔙 Back', 'ActionHandlerBack')
@@ -160,7 +160,7 @@ bot.action('ActionHandlerBasicQualifications',
         visitor
             .event(link, "Click Action", "/basic-qualifications")
             .send();
-        ctx.reply(msgBasicQualifications,
+        ctx.editMessageText(msgBasicQualifications,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
                     m.callbackButton('🔙 Back', 'ActionHandlerBack')
@@ -174,7 +174,7 @@ bot.action('ActionHandlerRoles',
         visitor
             .event(link, "Click Action", "/roles")
             .send();
-        ctx.reply(
+        ctx.editMessageText(
             msgRoles,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
@@ -214,7 +214,7 @@ bot.action('ActionHandlerSoftwareEngineering',
         visitor
             .event(link, "Click Action", "/software-engineering")
             .send();
-        ctx.reply(
+        ctx.editMessageText(
             msgSoftwareEngineering,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
@@ -229,7 +229,7 @@ bot.action('ActionHandlerCyberSecurity',
         visitor
             .event(link, "Click Action", "/cyber-security")
             .send();
-        ctx.reply(msgCyberSecurity,
+        ctx.editMessageText(msgCyberSecurity,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
                     m.callbackButton('🔙 Back', 'ActionHandlerRoles')
@@ -243,7 +243,7 @@ bot.action('ActionHandlerQuantitativeStrategists',
         visitor
             .event(link, "Click Action", "/quantitative-strategist")
             .send();
-        ctx.reply(msgQuantitativeStrategists,
+        ctx.editMessageText(msgQuantitativeStrategists,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
                     m.callbackButton('🔙 Back', 'ActionHandlerRoles')
@@ -257,7 +257,7 @@ bot.action('ActionHandlerSystemsEngineering',
         visitor
             .event(link, "Click Action", "/systems-engineering")
             .send();
-        ctx.reply(msgSystemsEngineering,
+        ctx.editMessageText(msgSystemsEngineering,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
                     m.callbackButton('🔙 Back', 'ActionHandlerRoles')
@@ -268,7 +268,7 @@ bot.action('ActionHandlerSystemsEngineering',
 
 bot.action('ActionHandlerBack',
     ctx => {
-        ctx.reply(
+        ctx.editMessageText(
             msgStart,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
@@ -309,7 +309,7 @@ bot.action('ActionHandlerUsefulLinks',
         visitor
             .event(link, "Click Action", "/useful-links")
             .send();
-        ctx.reply(
+        ctx.editMessageText(
             msgUsefulLinks,
             Extra.HTML().markup((m) =>
                 m.inlineKeyboard([
